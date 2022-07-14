@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <title>Daftar Disini</title> 
+        <link rel="stylesheet" href="Style.css"> 
+    </head> 
+    <body> 
+        <div class="menu-box"></div>
+        <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+            <div class="logo">
+              <img src="images/logo.png" alt="" />
+            </div>
+            </nav>
+        </div>
+        </div>
+        <div class="container"> 
+            <div class="loginbox">
+            <h2>Daftar</h2> 
+            <form action="#" method="POST"> 
+                <label>Email:</label><br>
+                <input type="text" placeholder="Masukkan email anda" id="username" name="username"/>
+                <label>Password:</label><br>
+                <input type="password" placeholder="Masukkan password anda" id="password" name="password"/>
+                <label>Konfirmasi Password:</label><br>
+                <input type="password" placeholder="Konfirmasi password anda" id="konfirm_password" name="konfirm_password" /> 
+                <input type="Submit" value="Daftar" name="Daftar" onclick="return Validate()" /> 
+                </form> 
+            </div> 
+        </div> 
+    </body> 
+</html> 
+ 
+<script type="text/javascript"> 
+    function Validate() { 
+        var password = document.getElementById("password").value; 
+        var konfirmPassword = document.getElementById("konfirm_password").value; 
+        if (password != konfirmPassword) { 
+            alert("Passwords tidak sesuai"); 
+            return false; 
+        } 
+        return true; 
+    } 
+</script>
